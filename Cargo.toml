@@ -5,18 +5,21 @@ resolver = "2"
 
 [workspace.dependencies]
 anyhow = "1.0.86"
+chrono = { version = "0.4.38", features = ["serde"] }
+fake = { version = "2.9.2", features = ["derive", "chrono"] }
 prost = "0.12.6"
 prost-build = "0.12.6"
 prost-types = "0.12.6"
-tonic = { version = "0.11.0", features = ["zstd", "tls"] }
-tonic-build = "0.11.0"
-tokio = { version = "1.38.0", features = ["rt", "rt-multi-thread", "macros"] }
+serde = { version = "1.0.203", features = ["derive"] }
+serde_yaml = "0.9.34"
 sqlx = { version = "0.7.4", features = [
     "chrono",
     "postgres",
     "runtime-tokio",
     "tls-rustls",
 ] }
-fake = { version = "2.9.2", features = ["derive", "chrono"] }
-serde = { version = "1.0.203", features = ["derive"] }
-chrono = { version = "0.4.38", features = ["serde"] }
+tonic = { version = "0.11.0", features = ["zstd", "tls"] }
+tonic-build = "0.11.0"
+tokio = { version = "1.38.0", features = ["rt", "rt-multi-thread", "macros"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
