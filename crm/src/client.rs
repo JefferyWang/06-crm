@@ -5,11 +5,11 @@ use uuid::Uuid;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let mut client = CrmClient::connect("http://[::1]:50000").await?;
+    let mut client = CrmClient::connect("http://127.0.0.1:8080").await?;
 
     let req = WelcomeRequestBuilder::default()
         .id(Uuid::new_v4().to_string())
-        .interval(108u32)
+        .interval(30u32)
         .content_ids([1u32, 2, 3])
         .build()?;
 
