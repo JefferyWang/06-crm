@@ -12,6 +12,7 @@ test_utils = ["fake", "nanoid"]
 [dependencies]
 anyhow = { workspace = true }
 chrono = { workspace = true }
+crm-metadata = { workspace = true }
 derive_builder = { workspace = true }
 fake = { workspace = true, features = ["derive", "chrono"], optional = true }
 futures = { workspace = true }
@@ -28,7 +29,7 @@ tokio-stream = { workspace = true }
 tonic = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
-uuid = { version = "1.10.0", features = ["v4"] }
+uuid = { workspace = true }
 
 
 [build-dependencies]

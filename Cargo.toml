@@ -32,3 +32,4 @@ tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 proto-builder-trait = "0.6.1"
 user-stat = { path = "user-stat" }
+uuid = { version = "1.10.0", features = ["v4"] }

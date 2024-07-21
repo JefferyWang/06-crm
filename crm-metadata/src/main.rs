@@ -16,7 +16,7 @@ async fn main() -> Result<()> {
     let addr = format!("[::1]:{}", config.server.port);
     let addr = addr.parse().unwrap();
     let svc = MetadataService::new(config).into_server();
-    info!("GreeterServer listening on {}", addr);
+    info!("MetadataService listening on {}", addr);
 
     Server::builder().add_service(svc).serve(addr).await?;
     Ok(())
