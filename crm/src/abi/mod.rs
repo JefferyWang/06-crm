@@ -1,3 +1,5 @@
+pub mod auth;
+
 use std::sync::Arc;
 
 use chrono::{Duration, Utc};
@@ -14,6 +16,8 @@ use crate::{
     pb::{WelcomeRequest, WelcomeResponse},
     CrmService,
 };
+
+pub use auth::DecodingKey;
 
 impl CrmService {
     pub async fn welcome(&self, req: WelcomeRequest) -> Result<Response<WelcomeResponse>, Status> {
